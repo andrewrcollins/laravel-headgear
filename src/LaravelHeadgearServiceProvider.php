@@ -2,7 +2,7 @@
 
 namespace AndrewRCollins\LaravelHeadgear;
 
-use AndrewRCollins\LaravelHeadgear\Commands\LaravelHeadgearCommand;
+use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -18,8 +18,12 @@ class LaravelHeadgearServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-headgear')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel_headgear_table')
-            ->hasCommand(LaravelHeadgearCommand::class);
+            ->hasRoute('web')
+            ->hasInstallCommand(function (InstallCommand $command) {
+                $command
+                    ->publishConfigFile()
+                    ->askToStarRepoOnGitHub();
+            });
+
     }
 }
