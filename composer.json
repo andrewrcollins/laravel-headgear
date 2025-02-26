@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "andrewrcollins/laravel-headgear",
+    "description": "Equip your Laravel app with OAuth 2.0 headgear -- keep it safe during development and testing.",
     "keywords": [
-        ":vendor_name",
+        "AndrewRCollins",
         "laravel",
-        ":package_slug"
+        "laravel-headgear"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/andrewrcollins/laravel-headgear",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Andrew Collins",
+            "email": "andrewrcollins@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,18 +30,17 @@
         "pestphp/pest-plugin-laravel": "^3.0",
         "phpstan/extension-installer": "^1.3||^2.0",
         "phpstan/phpstan-deprecation-rules": "^1.1||^2.0",
-        "phpstan/phpstan-phpunit": "^1.3||^2.0",
-        "spatie/laravel-ray": "^1.35"
+        "phpstan/phpstan-phpunit": "^1.3||^2.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "AndrewRCollins\\LaravelHeadgear\\": "src/",
+            "AndrewRCollins\\LaravelHeadgear\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "AndrewRCollins\\LaravelHeadgear\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +62,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "AndrewRCollins\\LaravelHeadgear\\LaravelHeadgearServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelHeadgear": "AndrewRCollins\\LaravelHeadgear\\Facades\\LaravelHeadgear"
             }
         }
     },

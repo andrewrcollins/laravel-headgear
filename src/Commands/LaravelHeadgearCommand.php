@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace AndrewRCollins\LaravelHeadgear\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelHeadgearCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-headgear';
 
     public $description = 'My command';
 
