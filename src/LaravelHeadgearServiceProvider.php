@@ -19,10 +19,10 @@ class LaravelHeadgearServiceProvider extends PackageServiceProvider
             ->name('laravel-headgear')
             ->hasConfigFile()
             ->hasRoute('web')
-            ->hasInstallCommand(function (InstallCommand $command) {
+            ->hasInstallCommand(function (InstallCommand $command): void {
                 $command
                     ->publishConfigFile()
-                    ->askToStarRepoOnGitHub();
+                    ->askToStarRepoOnGitHub('andrewrcollins/laravel-headgear');
             });
 
     }
